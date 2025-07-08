@@ -1,0 +1,203 @@
+/* reset lại tất cả các thuộc tính của bag về 0 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  width: 100%;
+  height: 60px;
+  z-index: 10;
+  position: fixed;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: #00abe8;
+  align-items: center;
+}
+.custom_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  width: 100%;
+  height: 60px;
+  z-index: 10;
+  position: fixed;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: #00abe8;
+  align-items: center;
+}
+.logo img {
+  flex: 1;
+  height: 60px;
+  width: auto;
+}
+.menu {
+  flex: 3;
+  display: flex;
+  padding: 0 200px;
+}
+.menu > li {
+  padding: 20px 12px;
+  position: relative;
+}
+.menu > li a {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  background-color: #00abe8;
+}
+/* ---------------Dùng để rê chuột vào cho dữ liệu xuất hiện ---------------------------*/
+.menu > li:hover .sub_menu {
+  visibility: visible;
+  opacity: 1;
+}
+.sub_menu {
+  position: absolute;
+  width: 150px;
+  border: 1px solid #ccc;
+  padding: 0px 0px 0px 0px;
+  /* -------------------Dùng để ẩn, làm mờ và tạo độ trễ ---------------- */
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  /* -------------------Dùng để tạo đồ cao cho lớp sub_menu ------------------*/
+  z-index: 1000;
+  background: #fff;
+}
+.sub_menu > li a {
+  padding: 10px 0px 10px 10px;
+  font-size: 17px;
+}
+/* ----------------------Footer ------------------------ */
+.footer_top {
+  flex: auto;
+  display: flex;
+  text-align: center;
+  padding: 0 100px 0 100px;
+  border-top: 2px solid #000;
+}
+/* Css để tạo các đường kẻ giữ các cột và not(..)là dùng để tránh cột đầu tiên bị viền */
+.footer_top > :not(:first-child) {
+  border-inline-start: 1px solid #ccc;
+}
+.footer_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.sub_footer > li {
+  padding: 5px 0;
+}
+.footer_icon {
+  font-size: 20px;
+}
+.footer_icon > a {
+  padding-left: 5%;
+}
+/* --------------------Phụ huynh--------------------------- */
+/* === Thiết lập chung === */
+.header-text {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hero {
+  background-color: #3273dc; /* Bulma's primary */
+  color: white;
+  padding: 2rem 1rem;
+}
+
+/* === Form Container === */
+.form-container {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+/* === Các input, textarea === */
+.input,
+.textarea,
+.select select {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus,
+.select select:focus {
+  border-color: #3273dc;
+  outline: none;
+}
+
+/* === Label === */
+.label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #363636;
+}
+
+/* === Radio, Checkbox === */
+.radio,
+.checkbox {
+  margin-right: 15px;
+  font-weight: normal;
+}
+
+/* === Buttons === */
+.button {
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.button.is-primary:hover {
+  background-color: #276cda;
+}
+
+.button.is-danger:hover {
+  background-color: #e53935;
+}
+
+/* === Message sau khi gửi === */
+.form-message {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+
+  .hero-body {
+    padding: 1.5rem 1rem;
+  }
+}

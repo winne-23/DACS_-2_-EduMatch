@@ -1,0 +1,140 @@
+/* reset lại tất cả các thuộc tính của bag về 0 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  width: 100%;
+  height: 60px;
+  z-index: 10;
+  position: fixed;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: #00abe8;
+  align-items: center;
+}
+.custom_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  width: 100%;
+  height: 60px;
+  z-index: 10;
+  position: fixed;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: #00abe8;
+  align-items: center;
+}
+.logo img {
+  flex: 1;
+  height: 60px;
+  width: auto;
+}
+.menu {
+  flex: 3;
+  display: flex;
+  padding: 0 200px;
+}
+.menu > li {
+  padding: 20px 12px;
+  position: relative;
+}
+.menu > li a {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  background-color: #00abe8;
+}
+/* ---------------Dùng để rê chuột vào cho dữ liệu xuất hiện ---------------------------*/
+.menu > li:hover .sub_menu {
+  visibility: visible;
+  opacity: 1;
+}
+.sub_menu {
+  position: absolute;
+  width: 150px;
+  border: 1px solid #ccc;
+  padding: 0px 0px 0px 0px;
+  /* -------------------Dùng để ẩn, làm mờ và tạo độ trễ ---------------- */
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  /* -------------------Dùng để tạo đồ cao cho lớp sub_menu ------------------*/
+  z-index: 1000;
+  background: #fff;
+}
+.sub_menu > li a {
+  padding: 10px 0px 10px 10px;
+  font-size: 17px;
+}
+/* ----------------------Footer ------------------------ */
+.footer_top {
+  flex: auto;
+  display: flex;
+  text-align: center;
+  padding: 0 100px 0 100px;
+  border-top: 2px solid #000;
+}
+/* Css để tạo các đường kẻ giữ các cột và not(..)là dùng để tránh cột đầu tiên bị viền */
+.footer_top > :not(:first-child) {
+  border-inline-start: 1px solid #ccc;
+}
+.footer_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.sub_footer > li {
+  padding: 5px 0;
+}
+.footer_icon {
+  font-size: 20px;
+}
+.footer_icon > a {
+  padding-left: 5%;
+}
+/* --------------------Phụ huynh--------------------------- */
+/* Form đăng kí gia sư */
+.header-text {
+  text-align: center;
+  height: 50px;
+}
+
+.header-text span {
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.spacer {
+  height: 10px;
+  padding-top: 65px;
+}
+
+.form-container {
+  border: solid 2px #00a779;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+.form-message {
+  display: none;
+  margin: 20px;
+  font-weight: bold;
+  color: green;
+  padding: 8px;
+  background-color: beige;
+  border-radius: 4px;
+  border: 1px solid aquamarine;
+}
