@@ -397,7 +397,7 @@
         messageEl.textContent = "✔ Gửi thông tin thành công!";
         messageEl.style.backgroundColor = "green";
         messageEl.style.color = "white";
-        submitBtn.disabled = false;
+        submitBtn.disabled = false; 
         document.getElementById("form").reset();
         setTimeout(() => {
           messageEl.style.display = "none";
@@ -410,7 +410,7 @@
         messageEl.style.color = "white";
         submitBtn.disabled = false;
       });
-  });
+  }); 
 
   function getNewRecord() {
     document.getElementById("form").reset();
