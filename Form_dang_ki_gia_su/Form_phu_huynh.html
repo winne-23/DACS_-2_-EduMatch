@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Form_phu_huynh.css" />
     <link rel="icon" href="/Image/Logo.png" type="image/x-icon" />
     <link
@@ -16,10 +16,10 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    /> 
+    />
     <title>EduMatch</title>
   </head>
-  <body> 
+  <body>
     <!-- -----------------làm thanh menu bên trên ------------------->
     <header class="custom_header">
       <div class="logo">
@@ -41,7 +41,8 @@
           >
           <ul class="sub_menu">
             <li>
-              <a href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_phu_huynh.html"
+              <a
+                href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_phu_huynh.html"
                 >Đăng kí tìm gia sư</a
               >
             </li>
@@ -66,7 +67,8 @@
           <a href="http://127.0.0.1:5500/Trang_Chu/Menu_gia_su.html">Gia sư</a>
           <ul class="sub_menu">
             <li>
-              <a href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_gia_su.html"
+              <a
+                href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_gia_su.html"
                 >Đăng kí làm gia sư</a
               >
             </li>
@@ -141,141 +143,45 @@
     <div class="spacer"></div>
     <div class="Introduce_contents">
       <!-- -------------------Làm tìm kiếm gia sư----------------- -->
-      <section class="hero is-primary is-bold is-center">
-        <div class="hero-body container header-text">
-          <span>ĐĂNG KÝ TÌM GIA SƯ</span>
-        </div>
-      </section>
-      
-      <div class="container form-container">
-        <form id="form" class="container m-4 pl-4" method="POST">
-          <div class="field">
-            <label class="label">Họ và tên</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Nhập họ và tên"
-                name="Họ và tên"
-                required
-              />
-            </div>
-          </div>
 
-          <div class="field">
-            <label class="label">Số điện thoại</label>
-            <div class="control">
-              <input
-                class="input"
-                type="tel"
-                placeholder="SĐT liên hệ"
-                name="Số điện thoại"
-                required
-              />
-            </div>
-          </div>
+      <h2>Đăng ký tìm gia sư</h2>
+      <form id="tutorForm">
+        <label>Họ và tên học sinh:</label>
+        <input type="text" name="studentName" required />
 
-          <div class="field">
-            <label class="label">Địa chỉ</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Địa chỉ học sinh"
-                name="Địa chỉ"
-              />
-            </div>
-          </div>
+        <label>Số điện thoại phụ huynh:</label>
+        <input type="tel" name="phone" pattern="[0-9]{10,11}" required />
 
-          <div class="field">
-            <label class="label">Môn học</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Môn cần học (VD: Toán, Văn...)"
-                name="Môn học"
-              />
-            </div>
-          </div>
+        <label>Địa chỉ:</label>
+        <input type="text" name="address" required />
 
-          <div class="field">
-            <label class="label">Lớp</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Lớp học hiện tại của học sinh"
-                name="Lớp"
-              />
-            </div>
-          </div>
+        <label>Môn học cần học:</label>
+        <input type="text" name="subject" required />
 
-          <div class="field">
-            <label class="label">Cần gia sư</label>
-            <div class="control">
-              <label class="radio"
-                ><input type="radio" name="Cần gia sư" value="Nam" /> Nam</label
-              >
-              <label class="radio"
-                ><input type="radio" name="Cần gia sư" value="Nữ" /> Nữ</label
-              >
-              <label class="radio"
-                ><input type="radio" name="Cần gia sư" value="Không yêu cầu" />
-                Không yêu cầu</label
-              >
-            </div>
-          </div>
+        <label>Lớp hiện tại:</label>
+        <input type="text" name="grade" required />
 
-          <div class="field">
-            <label class="label">Số buổi dạy mỗi tuần</label>
-            <div class="control">
-              <input
-                class="input"
-                type="number"
-                min="1"
-                max="7"
-                placeholder="Số buổi/tuần"
-                name="Số buổi dạy mỗi tuần"
-              />
-            </div>
-          </div>
+        <label>Yêu cầu gia sư:</label>
+        <select name="tutorGender" required>
+          <option value="">-- Chọn giới tính gia sư --</option>
+          <option value="Nam">Nam</option>
+          <option value="Nữ">Nữ</option>
+          <option value="Không yêu cầu">Không yêu cầu</option>
+        </select>
 
-          <div class="field">
-            <label class="label">Mức lương sàn (VNĐ/buổi)</label>
-            <div class="control">
-              <input
-                class="input"
-                type="text"
-                placeholder="Ví dụ: 150000"
-                name="Mức lương sàn"
-              />
-            </div>
-          </div>
+        <label>Số buổi học mỗi tuần:</label>
+        <input type="number" name="sessionsPerWeek" min="1" required />
 
-          <div class="field is-grouped">
-            <div class="control">
-              <button
-                class="button is-primary"
-                type="submit"
-                id="submit-button"
-              >
-                Gửi yêu cầu
-              </button>
-            </div>
-            <div class="control">
-              <button
-                class="button is-danger"
-                type="button"
-                onclick="getNewRecord()"
-              >
-                Hủy
-              </button>
-            </div>
-          </div>
-        </form>
-        <div id="message" class="form-message"></div>
+        <label>Mức lương sàn (VNĐ / tháng):</label>
+        <input type="number" name="salary" min="0" required />
+
+        <button type="submit">Gửi đăng ký</button>
+      </form>
+
+      <div class="success-message" id="successMessage" style="display: none">
+        ✅ Đăng ký của bạn đã được gửi!
       </div>
+    </div>
     <!---------------------- làm footer------------------------- -->
     <div class="footer_top">
       <li title="Footer Liên hệ">
@@ -343,56 +249,47 @@
       </li>
     </div>
     <script>
-      document.getElementById("form").addEventListener("submit", function (e) {
-        e.preventDefault();
-        document.getElementById("message").textContent = "Đang gửi...";
-        document.getElementById("message").style.display = "block";
-        document.getElementById("submit-button").disabled = true;
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbycKQvL8mmaGusQhTNwWT36FUIcvY-7b0b9jFUah8yysniaAKkxVjFdfznkZItHdfu0/exec";
 
-        var formData = new FormData(this);
-        var keyValuePairs = [];
-        for (var pair of formData.entries()) {
-          keyValuePairs.push(pair[0] + "=" + pair[1]);
-        }
-        var formDataString = keyValuePairs.join("&");
+      document
+        .getElementById("tutorForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-        fetch(
-          "https://script.google.com/macros/s/AKfycbysANd3A0P6ZmQ_gIYngt0KlY13OuYXY9h2jiuT3gzrje54ha0_00MO04qDxaa2vzdP/exec",
-          {
-            redirect: "follow",
+          const form = e.target;
+
+          const data = {
+            studentName: form.studentName.value,
+            phone: form.phone.value,
+            address: form.address.value,
+            subject: form.subject.value,
+            grade: form.grade.value,
+            tutorGender: form.tutorGender.value,
+            sessionsPerWeek: form.sessionsPerWeek.value,
+            salary: form.salary.value,
+          };
+
+          fetch(scriptURL, {
             method: "POST",
-            body: formDataString,
+            body: JSON.stringify(data),
             headers: {
-              "Content-Type": "text/plain;charset=utf-8",
+              "Content-Type": "application/json",
             },
-          }
-        )
-          .then(function (response) {
-            if (response) return response;
-            else throw new Error("Không gửi được dữ liệu.");
           })
-          .then(function () {
-            document.getElementById("message").textContent =
-              "Gửi thông tin thành công!";
-            document.getElementById("message").style.backgroundColor = "green";
-            document.getElementById("message").style.color = "beige";
-            document.getElementById("submit-button").disabled = false;
-            document.getElementById("form").reset();
-            setTimeout(() => {
-              document.getElementById("message").style.display = "none";
-            }, 3000);
-          })
-          .catch(function (error) {
-            console.error(error);
-            document.getElementById("message").textContent =
-              "Có lỗi xảy ra khi gửi.";
-            document.getElementById("message").style.display = "block";
-          });
-      });
-
-      function getNewRecord() {
-        document.getElementById("form").reset();
-      }
+            .then((response) => {
+              if (response.ok) {
+                document.getElementById("successMessage").style.display =
+                  "block";
+                form.reset();
+              } else {
+                alert("Gửi không thành công. Hãy thử lại.");
+              }
+            })
+            .catch((error) => {
+              console.error("Error!", error.message);
+            });
+        });
     </script>
   </body>
 </html>

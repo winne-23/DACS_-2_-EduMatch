@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Ký Tìm Gia Sư</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+      .container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+      }
+      h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #555;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      select,
+      textarea {
+        width: calc(100% - 22px); /* Account for padding and border */
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 17px;
+        width: 100%;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .message {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 4px;
+      }
+      .message.success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+      .message.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Đăng Ký Tìm Gia Sư</h2>
+      <form id="tutorRequestForm">
+        <div class="form-group">
+          <label for="fullName">Họ và Tên:</label>
+          <input type="text" id="fullName" name="fullName" required />
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Số điện thoại:</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            required
+            pattern="[0-9]{10,11}"
+            title="Vui lòng nhập số điện thoại hợp lệ (10-11 chữ số)"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <div class="form-group">
+          <label for="subject">Môn học cần gia sư:</label>
+          <select id="subject" name="subject" required>
+            <option value="">Chọn môn học</option>
+            <option value="Toan">Toán</option>
+            <option value="Ly">Lý</option>
+            <option value="Hoa">Hóa</option>
+            <option value="Anh">Anh</option>
+            <option value="Van">Văn</option>
+            <option value="Sinh">Sinh</option>
+            <option value="Su">Sử</option>
+            <option value="Dia">Địa</option>
+            <option value="Lap trinh">Lập trình</option>
+            <option value="Khac">Khác</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="grade">Lớp/Trình độ:</label>
+          <input
+            type="text"
+            id="grade"
+            name="grade"
+            placeholder="Ví dụ: Lớp 10, IELTS,..."
+          />
+        </div>
+        <div class="form-group">
+          <label for="address">Địa chỉ (khu vực):</label>
+          <input type="text" id="address" name="address" required />
+        </div>
+        <div class="form-group">
+          <label for="notes">Yêu cầu/Ghi chú khác:</label>
+          <textarea id="notes" name="notes" rows="4"></textarea>
+        </div>
+        <button type="submit">Gửi Yêu Cầu</button>
+        <div class="message" id="formMessage"></div>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("tutorRequestForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // Ngăn chặn form gửi đi theo cách truyền thống
+
+          const form = e.target;
+          const formData = new FormData(form);
+          const data = {};
+          formData.forEach((value, key) => {
+            data[key] = value;
+          });
+
+          const messageDiv = document.getElementById("formMessage");
+          messageDiv.textContent = "Đang gửi...";
+          messageDiv.className = "message"; // Reset classes
+
+          // Thay thế URL này bằng URL Google Apps Script đã triển khai của bạn
+          const scriptUrl =
+            "https://script.google.com/macros/s/AKfycbweRHLnNL8fCrUalEnNXMPSdvHaYbzI5YYqLpK-XrquStkFyy8mgh1gLiNINRBY00MW/exec"; // *** QUAN TRỌNG: Cần thay thế! ***
+
+          fetch(scriptUrl, {
+            method: "POST",
+            mode: "no-cors", // Sử dụng no-cors để tránh lỗi CORS khi submit form đơn giản
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: new URLSearchParams(data).toString(),
+          })
+            .then((response) => {
+              // Do không có CORS, chúng ta không thể kiểm tra response.ok
+              // Thay vào đó, dựa vào hành vi của Google Apps Script (thường thành công nếu không có lỗi)
+              messageDiv.textContent =
+                "Yêu cầu của bạn đã được gửi thành công! Chúng tôi sẽ liên hệ lại sớm.";
+              messageDiv.className = "message success";
+              form.reset(); // Xóa form sau khi gửi thành công
+            })
+            .catch((error) => {
+              console.error("Lỗi khi gửi yêu cầu:", error);
+              messageDiv.textContent =
+                "Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại sau.";
+              messageDiv.className = "message error";
+            });
+        });
+    </script>
+  </body>
+</html>

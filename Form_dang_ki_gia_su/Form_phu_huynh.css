@@ -104,37 +104,60 @@ header {
 .footer_icon > a {
   padding-left: 5%;
 }
+.spacer{
+  padding-top: 70px;
+}
 /* --------------------Phụ huynh--------------------------- */
 /* Form đăng kí gia sư */
-.header-text {
+
+h2 {
   text-align: center;
-  height: 50px;
+  color: #2a4365;
 }
 
-.header-text span {
-  font-size: 40px;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.spacer {
-  height: 10px;
-  padding-top: 65px;
-}
-
-.form-container {
-  border: solid 2px #00a779;
+form {
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px;
   border-radius: 10px;
-  padding-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-message {
-  display: none;
-  margin: 20px;
+label {
+  display: block;
+  margin-top: 15px;
   font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2c5282;
+}
+
+.success-message {
+  text-align: center;
+  margin-top: 20px;
   color: green;
-  padding: 8px;
-  background-color: beige;
-  border-radius: 4px;
-  border: 1px solid aquamarine;
+  font-weight: bold;
 }
