@@ -7,13 +7,17 @@
     <link rel="icon" href="/Image/Logo.png" type="image/x-icon" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <title>EduMatch</title>
   </head>
   <body>
     <!-- -----------------làm thanh menu bên trên ------------------->
-    <header>
+    <header class="custom_header">
       <div class="logo">
         <a href="http://127.0.0.1:5500/Trang_Chu/index.html"
           ><img src="/Image/Logo.png" alt="Xin lỗi nha quý dị" srcset=""
@@ -33,7 +37,8 @@
           >
           <ul class="sub_menu">
             <li>
-              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_phu_huynh.html"
+              <a
+                href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_phu_huynh.html"
                 >Đăng kí tìm gia sư</a
               >
             </li>
@@ -58,7 +63,8 @@
           <a href="http://127.0.0.1:5500/Trang_Chu/Menu_gia_su.html">Gia sư</a>
           <ul class="sub_menu">
             <li>
-              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_gia_su.html"
+              <a
+                href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_gia_su.html"
                 >Đăng kí làm gia sư</a
               >
             </li>
@@ -130,10 +136,102 @@
         </li>
       </div>
     </header>
+    <div class="Introduce_contents">
+      <section class="section">
+        <div class="container">
+          <h1 class="title is-3 has-text-centered">
+            Danh sách các lớp chưa giao
+          </h1>
+
+          <!-- Bộ lọc -->
+          <div class="filter-bar box">
+            <div class="columns is-multiline">
+              <div class="column is-one-third">
+                <input
+                  id="subject-filter"
+                  class="input"
+                  type="text"
+                  placeholder="Tìm theo môn học, ví dụ: Toán, Lý..."
+                />
+              </div>
+              <div class="column is-one-third">
+                <input
+                  id="area-filter"
+                  class="input"
+                  type="text"
+                  placeholder="Khu vực, ví dụ: Hải Châu, Đà Nẵng"
+                />
+              </div>
+              <div class="column is-one-third">
+                <button id="filter-button" class="button is-info is-fullwidth">
+                  <i class="fas fa-filter"></i> &nbsp; Lọc kết quả
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Danh sách lớp -->
+          <div class="columns is-multiline">
+            <!-- Card lớp -->
+            <div class="column is-half">
+              <div class="card class-card">
+                <div class="card-header">
+                  <p class="card-header-title">Toán lớp 9 - Hải Châu</p>
+                  <span class="tag is-danger m-3">Cấp 2</span>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p>
+                      <strong>Địa chỉ:</strong> 123 Nguyễn Văn Linh, Hải Châu
+                    </p>
+                    <p><strong>Yêu cầu:</strong> Nam gia sư, dạy Toán</p>
+                    <p><strong>Số buổi:</strong> 3 buổi/tuần</p>
+                    <p><strong>Mức lương:</strong> 180.000đ/buổi</p>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a href="#" class="card-footer-item has-text-primary"
+                    >Đăng ký nhận lớp</a
+                  >
+                </footer>
+              </div>
+            </div>
+
+            <!-- Card mẫu 2 -->
+            <div class="column is-half">
+              <div class="card class-card">
+                <div class="card-header">
+                  <p class="card-header-title">
+                    Tiếng Anh lớp 5 - Ngũ Hành Sơn
+                  </p>
+                  <span class="tag is-success m-3">Cấp 1</span>
+                </div>
+                <div class="card-content">
+                  <div class="content">
+                    <p>
+                      <strong>Địa chỉ:</strong> 88 Trần Đại Nghĩa, Ngũ Hành Sơn
+                    </p>
+                    <p><strong>Yêu cầu:</strong> Nữ, kinh nghiệm 1 năm</p>
+                    <p><strong>Số buổi:</strong> 2 buổi/tuần</p>
+                    <p><strong>Mức lương:</strong> 150.000đ/buổi</p>
+                  </div>
+                </div>
+                <footer class="card-footer">
+                  <a href="#" class="card-footer-item has-text-primary"
+                    >Đăng ký nhận lớp</a
+                  >
+                </footer>
+              </div>
+            </div>
+            <!-- Thêm nhiều thẻ lớp nữa nếu cần -->
+          </div>
+        </div>
+      </section>
+    </div>
     <!---------------------- làm footer------------------------- -->
     <div class="footer_top">
       <li title="Footer Liên hệ">
-        <a class="footer_title" href="">Liên hệ</a>
+        <a class="footer_title">Liên hệ</a>
         <ul class="sub_footer">
           <img
             src="/Image/Logo.png"
@@ -143,33 +241,33 @@
           />
 
           <li>
-            <a href="">Công ty trách nhiệm hữu hạn một thành viên EduMath</a>
+            <p>Công ty trách nhiệm hữu hạn một thành viên EduMath</p>
           </li>
           <li>
-            <a href=""
-              >Địa chỉ: 470 Đ. Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng ,
-              Vietnam</a
-            >
+            <p>
+              Địa chỉ: 470 Đ. Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng ,
+              Vietnam
+            </p>
           </li>
-          <li><a href="">SĐT: 0935.707.794</a></li>
-          <li><a href="">Email: thangtm.23it@vku.udn.vn</a></li>
+          <li><p>ĐT: 0935.707.794</p></li>
+          <li><p>Email: thangtm.23it@vku.udn.vn</p></li>
         </ul>
       </li>
       <li title="Footer hỏi đáp">
-        <a class="footer_title" href="">Các câu hỏi thường gặp</a>
+        <a class="footer_title">Các câu hỏi thường gặp</a>
         <ul class="sub_footer">
-          <li><a href="">Tại sao tôi lại tìm gia sư trên EduMath?</a></li>
-          <li><a href="">Có phải đóng gì thêm ngoài tiền học phí không?</a></li>
-          <li><a href="">Nhà tôi không có chỗ để học?</a></li>
-          <li><a href="">Muốn nhận lớp dạy tôi phải làm những gì?</a></li>
-          <li><a href="">Hiện giờ tôi không đủ chi phí để nhận lớp?</a></li>
-          <li><a href="">Có phải làm hợp đồng không?</a></li>
-          <li><a href="">Khi dạy gia sư có cam kết gì không?</a></li>
-          <li><a href="">Nếu tôi thấy không hài lòng về gia sư thì sao?</a></li>
+          <li><p>Tại sao tôi lại tìm gia sư trên EduMath?</p></li>
+          <li><p>Có phải đóng gì thêm ngoài tiền học phí không?</p></li>
+          <li><p>Nhà tôi không có chỗ để học?</p></li>
+          <li><p>Muốn nhận lớp dạy tôi phải làm những gì?</p></li>
+          <li><p>Hiện giờ tôi không đủ chi phí để nhận lớp?</p></li>
+          <li><p>Có phải làm hợp đồng không?</p></li>
+          <li><p>Khi dạy gia sư có cam kết gì không?</p></li>
+          <li><p>Nếu tôi thấy không hài lòng về gia sư thì sao?</p></li>
         </ul>
       </li>
       <li title="Footer Trên mạng xã hội">
-        <a class="footer_title" href="">Các trang mạng truyền thông</a>
+        <a class="footer_title">Các trang mạng truyền thông</a>
         <ul>
           <li class="footer_icon">
             <a
@@ -196,5 +294,32 @@
         </ul>
       </li>
     </div>
+    <script>
+      document
+        .getElementById("filter-button")
+        .addEventListener("click", function () {
+          const subjectInput = document
+            .getElementById("subject-filter")
+            .value.toLowerCase();
+          const areaInput = document
+            .getElementById("area-filter")
+            .value.toLowerCase();
+
+          const cards = document.querySelectorAll(".class-card");
+
+          cards.forEach(function (card) {
+            const cardText = card.innerText.toLowerCase();
+            const matchSubject =
+              subjectInput === "" || cardText.includes(subjectInput);
+            const matchArea = areaInput === "" || cardText.includes(areaInput);
+
+            if (matchSubject && matchArea) {
+              card.parentElement.style.display = "block";
+            } else {
+              card.parentElement.style.display = "none";
+            }
+          });
+        });
+    </script>
   </body>
 </html>

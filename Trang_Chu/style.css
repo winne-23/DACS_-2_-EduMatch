@@ -169,6 +169,55 @@ header {
 }
 
 /* --------------------Phụ huynh--------------------------- */
+/* ----------------------Gia sư------------------------ */
+.hero-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("/Image/banner-giasu.jpg") center/cover no-repeat;
+  color: white;
+}
+
+.info-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h2 {
+  color: #3273dc;
+  margin-bottom: 1rem;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #3273dc;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.btn-primary {
+  background-color: #3273dc;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #275fad;
+  color: white;
+}
+
 /* ---------------------Gia sư tiêu biểu ----------------- */
 .GS_Tieu_bieu {
   display: flex;
@@ -183,4 +232,123 @@ header {
   justify-content: center;
   align-content: center;
   height: 300px;
+}
+/* --------------------------------Lớp chưa giao -------------------- */
+
+.class-card {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.class-card:hover {
+  transform: scale(1.02);
+}
+
+.card .card-footer-item {
+  font-weight: bold;
+}
+.card-header-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000;
+}
+.title {
+  color: #3e3e3e;
+}
+
+.filter-bar {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+/* ------------------------Hỏi đáp --------------- */
+.faq-content {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.faq-content.is-active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ----------------Tuyển dụng---------------- */
+.custom-box {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 2rem;
+  background-color: #fff;
+  animation: fadeIn 0.8s ease;
+}
+
+ul.content li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+a.button.is-primary:hover {
+  background-color: #3273dc;
+  box-shadow: 0 4px 12px rgba(50, 115, 220, 0.3);
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* --------------------Liên hệ -------------------- */
+.info-box {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.info-icon {
+  font-size: 1.4rem;
+  margin-right: 10px;
+  color: #00d1b2;
+}
+
+.btn-group {
+  margin-top: 2rem;
+}
+
+.btn-group .button {
+  margin: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-group .button:hover {
+  background-color: #00c4a7;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.icons a {
+  margin: 0 10px;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.icons a:hover {
+  color: #00d1b2;
 }
