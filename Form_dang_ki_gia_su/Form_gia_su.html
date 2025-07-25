@@ -139,158 +139,84 @@
       </div>
     </header>
     <div class="spacer"></div>
-    <div class="Introduce_contents">
       <!-- -------------------Làm tìm kiếm gia sư----------------- -->
-<section class="hero is-primary is-bold is-center">
-  <div class="hero-body container header-text">
-    <span>ĐĂNG KÝ LÀM GIA SƯ</span>
-  </div>
-</section>
-
-<div class="container form-container">
-  <form id="form" class="container m-4 pl-4" method="POST">
-    
-    <div class="field">
-      <label class="label">Họ và tên</label>
-      <div class="control">
-        <input
-          class="input"
-          type="text"
-          placeholder="Nhập họ và tên"
-          name="Họ và tên"
-          required
-        />
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Số điện thoại</label>
-      <div class="control">
-        <input
-          class="input"
-          type="tel"
-          placeholder="SĐT liên hệ"
-          name="Số điện thoại"
-          required
-        />
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Email</label>
-      <div class="control">
-        <input
-          class="input"
-          type="email"
-          placeholder="Email liên hệ"
-          name="Email"
-        />
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Trình độ học vấn</label>
-      <div class="control">
-        <div class="select">
-          <select name="Trình độ học vấn">
-            <option>Đại học</option>
-            <option>Sinh viên</option>
-            <option>Cao học</option>
-            <option>Giáo viên</option>
+    <div class="container">
+      <h2 class="custom_h2">Đăng Ký Tìm Gia Sư</h2>
+      <form id="tutorRequestForm">
+        <div class="form-group">
+          <label for="fullName">Họ và Tên:</label>
+          <input type="text" id="fullName" name="fullName" placeholder="VD: Trần Mạnh Thắng"/>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Số điện thoại:</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            required
+            placeholder="VD: 0935707794"
+            pattern="[0-9]{10,11}"
+            title="Vui lòng nhập số điện thoại hợp lệ (10-11 chữ số)"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="VD: thangtm.23it@vku.udn.vn"/>
+        </div>
+        <div class="form-group">
+          <label for="Educational_Lever">Trình độ học vấn:</label>
+          <select id="Educational_Lever" name="Educational_Lever" required>
+            <option value="">Trình độ</option>
+            <option value="Trung học phổ thông (THPT)">Trung học phổ thông (THPT)</option>
+            <option value="Đại học">Đại học</option>
+            <option value="Cao đăng">Cao đăng</option>
+            <option value="Thạc sĩ">Thạc sĩ</option>
+            <option value="Tiến sĩ">Tiến sĩ</option>
           </select>
         </div>
-      </div>
+        <div class="form-group">
+          <label for="subject">Môn học cần gia sư:</label>
+          <select id="subject" name="subject" required >
+            <option value="">Chọn môn học</option>
+            <option value="Toan">Toán</option>
+            <option value="Ly">Lý</option>
+            <option value="Hoa">Hóa</option>
+            <option value="Anh">Anh</option>
+            <option value="Van">Văn</option>
+            <option value="Sinh">Sinh</option>
+            <option value="Su">Sử</option>
+            <option value="Dia">Địa</option>
+            <option value="IELTS">IELTS</option>
+            <option value="Khac">Khác</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="grade">Lớp:</label>
+          <input
+            type="text"
+            id="grade"
+            name="grade"
+            placeholder="VD: 1,2,3,4,5,6,....."
+          />
+        </div>
+        <div class="form-group">
+          <label for="address">Khu vực có thể dạy:</label>
+          <input type="text" id="address" name="address" placeholder="VD: Hải Châu, Ngũ Hành Sơn, Sơn Trà, ..." required />
+        </div>
+        <div class="form-group">
+          <label for="EXP_Teaching">Kinh nghiệm dạy học:</label>
+          <input type="text" id="EXP_Teaching" name="EXP_Teaching" placeholder="VD: Hải Châu, Ngũ Hành Sơn, Sơn Trà, ..." required />
+        </div>
+
+        <div class="form-group">
+          <label for="notes">Yêu cầu/Ghi chú khác:</label>
+          <textarea id="notes" name="notes" rows="4"></textarea>
+        </div>
+        <button type="submit">Gửi Yêu Cầu</button>
+        <div class="message" id="formMessage"></div>
+      </form>
     </div>
 
-    <div class="field">
-      <label class="label">Môn có thể dạy</label>
-      <div class="control">
-        <input
-          class="input"
-          type="text"
-          placeholder="Ví dụ: Toán, Lý, Hóa..."
-          name="Môn có thể dạy"
-        />
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Lớp có thể dạy</label>
-      <div class="control">
-        <input
-          class="input"
-          type="text"
-          placeholder="Ví dụ: Lớp 6 đến lớp 12"
-          name="Lớp có thể dạy"
-        />
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Khu vực muốn dạy</label>
-      <div class="control">
-        <input
-          class="input"
-          type="text"
-          placeholder="Quận/Huyện, Thành phố"
-          name="Khu vực muốn dạy"
-        />
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Kinh nghiệm dạy học</label>
-      <div class="control">
-        <textarea
-          class="textarea"
-          placeholder="Tóm tắt kinh nghiệm giảng dạy nếu có..."
-          name="Kinh nghiệm"
-        ></textarea>
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Thời gian rảnh</label>
-      <div class="control">
-        <input
-          class="input"
-          type="text"
-          placeholder="VD: Tối thứ 2, 4, 6"
-          name="Thời gian rảnh"
-        />
-      </div>
-    </div>
-
-    <div class="field">
-      <label class="label">Hình thức dạy</label>
-      <div class="control">
-        <label class="checkbox">
-          <input type="checkbox" name="Hình thức dạy" value="Tại nhà" />
-          Tại nhà
-        </label>
-        <label class="checkbox ml-3">
-          <input type="checkbox" name="Hình thức dạy" value="Online" />
-          Online
-        </label>
-      </div>
-    </div>
-
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-primary" type="submit" id="submit-button">
-          Gửi đăng ký
-        </button>
-      </div>
-      <div class="control">
-        <button class="button is-danger" type="button" onclick="getNewRecord()">
-          Hủy
-        </button>
-      </div>
-    </div>
-  </form>
-
-  <div id="message" class="form-message"></div>
-</div>
 
     <!---------------------- làm footer------------------------- -->
      <div class="footer_top">
@@ -359,64 +285,7 @@
       </li>
     </div>
     <script>
-  document.getElementById("form").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const messageEl = document.getElementById("message");
-    const submitBtn = document.getElementById("submit-button");
-
-    messageEl.textContent = "Đang gửi...";
-    messageEl.style.display = "block";
-    messageEl.style.backgroundColor = "transparent";
-    messageEl.style.color = "#000";
-    submitBtn.disabled = true;
-
-    const formData = new FormData(this);
-    const keyValuePairs = [];
-
-    for (let pair of formData.entries()) {
-      keyValuePairs.push(pair[0] + "=" + encodeURIComponent(pair[1]));
-    }
-
-    const formDataString = keyValuePairs.join("&");
-
-    fetch(
-      "https://script.google.com/macros/s/AKfycbyGGE4EU3MK2kDQsj-YJzPiSIPVMaLCTnjCCrkVTKKT-3elmocmkhVhh5T2rzb-PSNw/exec",
-      {
-        method: "POST",
-        body: formDataString,
-        headers: {
-          "Content-Type": "text/plain;charset=utf-8",
-        },
-      }
-    )
-      .then((res) => {
-        if (!res.ok) throw new Error("Không gửi được dữ liệu.");
-        return res.text();
-      }) 
-      .then(() => {
-        messageEl.textContent = "✔ Gửi thông tin thành công!";
-        messageEl.style.backgroundColor = "green";
-        messageEl.style.color = "white";
-        submitBtn.disabled = false; 
-        document.getElementById("form").reset();
-        setTimeout(() => {
-          messageEl.style.display = "none";
-        }, 4000);
-      })
-      .catch((err) => {
-        console.error(err);
-        messageEl.textContent = "❌ Có lỗi xảy ra khi gửi. Vui lòng thử lại.";
-        messageEl.style.backgroundColor = "crimson";
-        messageEl.style.color = "white";
-        submitBtn.disabled = false;
-      });
-  }); 
-
-  function getNewRecord() {
-    document.getElementById("form").reset();
-    document.getElementById("message").style.display = "none";
-  }
-</script>
+    </script>
 
   </body>
 </html>
