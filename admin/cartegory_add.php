@@ -1,7 +1,7 @@
-<?php
+<!-- <?php
 include "header.php";
 include "slide.php"
-?>
+?> -->
 <div class="adimin_content_right">
     <h1>Thêm Menu</h1>
     <div class="admin_content_right_category_add">
