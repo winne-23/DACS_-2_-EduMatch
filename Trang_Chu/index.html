@@ -1,204 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-  <!--Youtube: Netmediacctv-->
-	<title>Form Đăng ký</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/Image/Logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>EduMatch</title>
   </head>
   <body>
-    <section class="hero is-primary is-bold is-center">
-      <div class="hero-body container"  style="text-align: center; height:50px; padding: 5px;">        
-          <span style="font-size: 30px; color: #ffffff; font-weight: bold;">ĐĂNG KÝ TÀI KHOẢN</span>		
+    <!-- -----------------làm thanh menu bên trên ------------------->
+    <header>
+      <div class="logo">
+        <a href="http://127.0.0.1:5500/Trang_Chu/index.html"
+          ><img src="/Image/Logo.png" alt="Xin lỗi nha quý dị" srcset=""
+        /></a>
+      </div>
+      <div class="menu">
+        <li class="Giới thiệu">
+          <a
+            href="http://127.0.0.1:5500/Trang_Chu/Gioi_thieu.html"
+            title="Menu giới thiệu"
+            >Giới thiệu</a
+          >
+        </li>
+        <li title="Menu phụ huynh">
+          <a href="http://127.0.0.1:5500/Trang_Chu/Menu_phu_huynh.html"
+            >Phụ huynh</a
+          >
+          <ul class="sub_menu">
+            <li>
+              <a
+                href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_phu_huynh.html"
+                >Đăng kí tìm gia sư</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_phu_huynh.html"
+                >Học phí tham khảo</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_phu_huynh.html"
+                >Dịch vụ gia sư</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_phu_huynh.html"
+                >Gia sư tiêu biểu</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li title="Menu gia sư">
+          <a href="http://127.0.0.1:5500/Trang_Chu/Menu_gia_su.html">Gia sư</a>
+          <ul class="sub_menu">
+            <li>
+              <a
+                href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_gia_su.html"
+                >Đăng kí làm gia sư</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_gia_su.html"
+                >Hướng dẫn nhận lớp</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_gia_su.html"
+                >Hợp đồng gia sư</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_gia_su.html"
+                >Tuyển dụng</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li title="Menu lớp chưa giao">
+          <a href="http://127.0.0.1:5500/Trang_Chu/Menu_lop_chua_giao.html"
+            >Lớp chưa giao</a
+          >
+          <ul class="sub_menu">
+            <li>
+              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_lop_chua_giao.html"
+                >Cấp 1</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_lop_chua_giao.html"
+                >Cấp 2</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_lop_chua_giao.html"
+                >Cấp 3</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li title="Menu tuyển dụng">
+          <a href="http://127.0.0.1:5500/Trang_Chu/Menu_tuyen_dung.html"
+            >Tuyển dụng</a
+          >
+        </li>
+        <li title="Menu hỏi đáp">
+          <a href="http://127.0.0.1:5500/Trang_Chu/Menu_hoi_dap.html"
+            >Hỏi đáp</a
+          >
+          <ul class="sub_menu">
+            <li>
+              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_hoi_dap.html"
+                >Phụ huynh</a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/Trang_Chu/Menu_hoi_dap.html"
+                >Gia sư</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li title="Menu liên hệ">
+          <a href="http://127.0.0.1:5500/Trang_Chu/Menu_lien_he.html"
+            >Liên hệ</a
+          >
+        </li>
+      </div>
+    </header>
+    <!-------------------------- Làm slide--------------------- -->
+    <section id="Slide">
+      <div class="aspect-ratio-169">
+        <img src="/Image/Slide1.jpg" />
+        <img src="/Image/Slide2.jpg" />
+        <img src="/Image/Slide3.jpg" />
+        <img src="/Image/Slide4.jpg" />
+        <img src="/Image/Slide5.jpg" />
+      </div>
+      <div class="dot_Container">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
       </div>
     </section>
-	<div style="height: 10px"></div>
-	<div class="container" style="border: solid 2px #00a779; border-radius: 10px" > 
-		<form id="form" class="container m-4 pl-4" method="POST">
-		  <div class="field">
-			<label class="label">Họ và tên</label>
-			<div class="control">
-			  <input
-				class="input"
-				type="text"
-				placeholder="Họ và tên của bạn"
-				name="Full Name"
-			  />
-			</div>
-		  </div>
+    <!---------------------- làm footer------------------------- -->
+    <div class="footer_top">
+      <li title="Footer Liên hệ">
+        <a class="footer_title" href="">Liên hệ</a>
+        <ul class="sub_footer">
+          <img
+            src="/Image/Logo.png"
+            style="width: 35%; height: auto"
+            alt="Xin lỗi nha quý dị"
+            srcset=""
+          />
 
-		  <div class="field">
-			<label class="label">Username</label>
-			<div class="control">
-			  <input
-				class="input"
-				type="text"
-				placeholder="User Name"
-				name="User Name"
-			  />
-			</div>
-		  </div>
-
-		  <div class="field">
-			<label class="label">Password</label>
-			<div class="control">
-			  <input
-				class="input"
-				type="password"
-				placeholder="Your Password"
-				name="Password"
-			  />
-			</div>
-		  </div>
-		  
-		  <div class="field">
-			<label class="label">Email</label>
-			<div class="control">
-			  <input
-				class="input"
-				type="email"
-				placeholder="Email của bạn"
-				name="Email"
-			  />
-			</div>
-		  </div>
-		  
-
-		  <div class="field">
-			<label class="label">Năm sinh</label>
-			<div class="control">
-			  <input
-				class="input"
-				type="date"
-				placeholder="Ngày tháng năm sinh"
-				name="Date of Birthday"
-			  />
-			</div>
-		  </div>
-
-		  <div class="field">
-			<label class="label">Giới tính</label>
-			<div class="control">
-			  <label class="radio">
-				<input type="radio" name="Gender" value="Nam" /> Nam
-			  </label>
-			  <label class="radio">
-				<input type="radio" name="Gender" value="Nữ" /> Nữ
-			  </label>
-			</div>
-		  </div>
-
-		  <div class="field">
-			<label class="label"><a href="https://giaoan.link" target="_blank"> Các điều khoản <span class="bi bi-arrow-90deg-right"></span></a></label>
-			<div class="control">
-			  <label class="checkbox">
-				<input type="checkbox" name="Agree To Terms" value="Đồng ý" /> Tôi đồng ý với các điều khoản và điều kiện
-			  </label>
-			</div>
-		  </div>
-
-		  <div class="field">
-			<label class="label">Thông tin bổ sung</label>
-			<div class="control">
-			  <textarea
-				class="textarea"
-				placeholder="Thêm bất cứ thông tin nào bạn muốn!"
-				name="Notes"
-			  ></textarea>
-			</div>
-		  </div>
-
-		  <div class="field is-grouped">
-			<div class="control">
-			  <button class="button is-primary" type="submit" id="submit-button">
-				Sign up
-			  </button>
-			</div>
-			<div class="control">
-			  <button class="button is-danger" type="button" onclick="getNewRecord()">Cancel</button>
-			</div>
-		  </div>
-		</form>
-		<div
-		  id="message"
-		  style="
-			display: none;
-			margin: 20px;
-			font-weight: bold;
-			color: green;
-			padding: 8px;
-			background-color: beige;
-			border-radius: 4px;
-			border-color: aquamarine;
-		  "
-		></div>
-	</div>
-
-    <script>
-      document.getElementById("form").addEventListener("submit", function (e) {
-        e.preventDefault(); // Prevent the default form submission
-        document.getElementById("message").textContent = "Submitting..";
-        document.getElementById("message").style.display = "block";
-        document.getElementById("submit-button").disabled = true;
-
-
-        // Collect the form data
-        var formData = new FormData(this);
-        var keyValuePairs = [];
-        for (var pair of formData.entries()) {
-          keyValuePairs.push(pair[0] + "=" + pair[1]);
-        }
-
-        var formDataString = keyValuePairs.join("&");
-
-        // Send a POST request to your Google Apps Script
-        fetch(
-          "https://script.google.com/macros/s/AKfycbwFEcvootkURjAa7Hb6RwwtiiNjuGkuYb0a4bLEM-JwXggs4CzF6VM97-B0ybEWV4bAzA/exec",
-          {
-            redirect: "follow",
-            method: "POST",
-            body: formDataString,
-            headers: {
-              "Content-Type": "text/plain;charset=utf-8",
-            },
-          }
-        )
-          .then(function (response) {
-            // Check if the request was successful
-            if (response) {
-              return response; // Assuming your script returns JSON response
-            } else {
-              throw new Error("Failed to submit the form.");
-            }
-          })
-          .then(function (data) {
-            // Display a success message
-            document.getElementById("message").textContent =
-              "Data submitted successfully!";
-            document.getElementById("message").style.display = "block";
-            document.getElementById("message").style.backgroundColor = "green";
-            document.getElementById("message").style.color = "beige";
-            document.getElementById("submit-button").disabled = false;
-            document.getElementById("form").reset();
-
-            setTimeout(function () {
-              document.getElementById("message").textContent = "";
-              document.getElementById("message").style.display = "none";
-            }, 2600);
-          })
-          .catch(function (error) {
-            // Handle errors, you can display an error message here
-            console.error(error);
-            document.getElementById("message").textContent =
-              "An error occurred while submitting the form.";
-            document.getElementById("message").style.display = "block";
-          });
-      });
-	  
-	    function getNewRecord(){
-		document.getElementById("form").reset();
-		
-		};
-    </script>
+          <li>
+            <a href="">Công ty trách nhiệm hữu hạn một thành viên EduMath</a>
+          </li>
+          <li>
+            <a href=""
+              >Địa chỉ: 470 Đ. Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng ,
+              Vietnam</a
+            >
+          </li>
+          <li><a href="">SĐT: 0935.707.794</a></li>
+          <li><a href="">Email: thangtm.23it@vku.udn.vn</a></li>
+        </ul>
+      </li>
+      <li title="Footer hỏi đáp">
+        <a class="footer_title" href="">Các câu hỏi thường gặp</a>
+        <ul class="sub_footer">
+          <li><a href="">Tại sao tôi lại tìm gia sư trên EduMath?</a></li>
+          <li><a href="">Có phải đóng gì thêm ngoài tiền học phí không?</a></li>
+          <li><a href="">Nhà tôi không có chỗ để học?</a></li>
+          <li><a href="">Muốn nhận lớp dạy tôi phải làm những gì?</a></li>
+          <li><a href="">Hiện giờ tôi không đủ chi phí để nhận lớp?</a></li>
+          <li><a href="">Có phải làm hợp đồng không?</a></li>
+          <li><a href="">Khi dạy gia sư có cam kết gì không?</a></li>
+          <li><a href="">Nếu tôi thấy không hài lòng về gia sư thì sao?</a></li>
+        </ul>
+      </li>
+      <li title="Footer Trên mạng xã hội">
+        <a class="footer_title" href="">Các trang mạng truyền thông</a>
+        <ul>
+          <li class="footer_icon">
+            <a
+              href="https://www.facebook.com/tran.thang.453967/"
+              class="fa-brands fa-facebook"
+            ></a>
+            <a
+              href="https://www.instagram.com/okewinn.ne/"
+              class="fa-brands fa-instagram"
+            ></a>
+            <a
+              href="https://www.tiktok.com/@tranmanhthang07082005"
+              class="fa-brands fa-tiktok"
+            ></a>
+            <a
+              href="https://mail.google.com/mail/u/0/#inbox"
+              class="fa-solid fa-envelope"
+            ></a>
+            <a
+              href="https://www.threads.com/@okewinn.ne"
+              class="fa-brands fa-threads"
+            ></a>
+          </li>
+        </ul>
+      </li>
+    </div>
   </body>
+  <script>
+    // ------------------tạo slide trượt ảnh---------------
+    const imgPositions = document.querySelectorAll(".aspect-ratio-169 img");
+    const imgContainer = document.querySelector(".aspect-ratio-169");
+    const dotItem = document.querySelectorAll(".dot");
+    const imgNumber = imgPositions.length;
+    let index = 0;
+
+    // ------------------Sắp xếp ảnh----------------------
+    imgContainer.style.display = "flex";
+    imgContainer.style.transition = "transform 0.7s ease";
+
+    imgPositions.forEach((image) => {
+      image.style.minWidth = "100%"; // để các ảnh nằm ngang
+      image.style.height = "auto";
+    });
+
+    // ----------------------Xử lý khi click vào dot--------------
+    dotItem.forEach((dot, i) => {
+      dot.addEventListener("click", function () {
+        index = i;
+        updateSlide();
+      });
+    });
+
+    // --------------Tự động chuyển slide----------------
+    function imgSlide() {
+      index++;
+      if (index >= imgNumber) index = 0;
+      updateSlide();
+    }
+
+    // -----------------Hàm cập nhật slide----------------------
+    function updateSlide() {
+      imgContainer.style.transform = `translateX(-${index * 100}%)`;
+      updateDot();
+    }
+
+    // ----------Cập nhật dot đang active-------------
+    function updateDot() {
+      dotItem.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    setInterval(imgSlide, 7000);
+  </script>
 </html>

@@ -41,7 +41,8 @@
           >
           <ul class="sub_menu">
             <li>
-              <a href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_phu_huynh.html"
+              <a
+                href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_phu_huynh.html"
                 >Đăng kí tìm gia sư</a
               >
             </li>
@@ -66,7 +67,8 @@
           <a href="http://127.0.0.1:5500/Trang_Chu/Menu_gia_su.html">Gia sư</a>
           <ul class="sub_menu">
             <li>
-              <a href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_gia_su.html"
+              <a
+                href="http://127.0.0.1:5500/Form_dang_ki_gia_su/Form_gia_su.html"
                 >Đăng kí làm gia sư</a
               >
             </li>
@@ -139,13 +141,18 @@
       </div>
     </header>
     <div class="spacer"></div>
-      <!-- -------------------Làm tìm kiếm gia sư----------------- -->
+    <!-- -------------------Làm tìm kiếm gia sư----------------- -->
     <div class="container">
       <h2 class="custom_h2">Đăng Ký Tìm Gia Sư</h2>
       <form id="tutorRequestForm">
         <div class="form-group">
           <label for="fullName">Họ và Tên:</label>
-          <input type="text" id="fullName" name="fullName" placeholder="VD: Trần Mạnh Thắng"/>
+          <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="VD: Trần Mạnh Thắng"
+          />
         </div>
         <div class="form-group">
           <label for="phoneNumber">Số điện thoại:</label>
@@ -161,13 +168,20 @@
         </div>
         <div class="form-group">
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="VD: thangtm.23it@vku.udn.vn"/>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="VD: thangtm.23it@vku.udn.vn"
+          />
         </div>
         <div class="form-group">
           <label for="Educational_Lever">Trình độ học vấn:</label>
           <select id="Educational_Lever" name="Educational_Lever" required>
             <option value="">Trình độ</option>
-            <option value="Trung học phổ thông (THPT)">Trung học phổ thông (THPT)</option>
+            <option value="Trung học phổ thông (THPT)">
+              Trung học phổ thông (THPT)
+            </option>
             <option value="Đại học">Đại học</option>
             <option value="Cao đăng">Cao đăng</option>
             <option value="Thạc sĩ">Thạc sĩ</option>
@@ -176,7 +190,7 @@
         </div>
         <div class="form-group">
           <label for="subject">Môn học cần gia sư:</label>
-          <select id="subject" name="subject" required >
+          <select id="subject" name="subject" required>
             <option value="">Chọn môn học</option>
             <option value="Toan">Toán</option>
             <option value="Ly">Lý</option>
@@ -201,25 +215,40 @@
         </div>
         <div class="form-group">
           <label for="address">Khu vực có thể dạy:</label>
-          <input type="text" id="address" name="address" placeholder="VD: Hải Châu, Ngũ Hành Sơn, Sơn Trà, ..." required />
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="VD: Hải Châu, Ngũ Hành Sơn, Sơn Trà, ..."
+            required
+          />
         </div>
         <div class="form-group">
           <label for="EXP_Teaching">Kinh nghiệm dạy học:</label>
-          <input type="text" id="EXP_Teaching" name="EXP_Teaching" placeholder="VD: Đã dạy nhiều học sinh, chưa dạy ai cả, ..." required />
+          <input
+            type="text"
+            id="EXP_Teaching"
+            name="EXP_Teaching"
+            placeholder="VD: Đã dạy nhiều học sinh, chưa dạy ai cả, ..."
+            required
+          />
         </div>
 
         <div class="form-group">
           <label for="Self-introduction">Đôi lời giới thiệu về bản thân:</label>
-          <textarea id="Self-introduction" name="Self-introduction" rows="4"></textarea>
+          <textarea
+            id="Self-introduction"
+            name="Self-introduction"
+            rows="4"
+          ></textarea>
         </div>
         <button type="submit">Gửi Yêu Cầu</button>
         <div class="message" id="formMessage"></div>
       </form>
     </div>
 
-
     <!---------------------- làm footer------------------------- -->
-     <div class="footer_top">
+    <div class="footer_top">
       <li title="Footer Liên hệ">
         <a class="footer_title">Liên hệ</a>
         <ul class="sub_footer">
@@ -284,94 +313,5 @@
         </ul>
       </li>
     </div>
-    <script>
-      document
-        .getElementById("tutorRequestForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault(); // Ngăn chặn form gửi đi theo cách truyền thống
-
-          const form = e.target;
-          const formData = new FormData(form);
-          const data = {};
-          formData.forEach((value, key) => {
-            data[key] = value;
-          });
-
-          const messageDiv = document.getElementById("formMessage");
-          messageDiv.textContent = "Đang gửi...";
-          messageDiv.className = "message"; // Reset classes
-
-          // Thay thế URL này bằng URL Google Apps Script đã triển khai của bạn
-          const scriptUrl =
-            "https://script.google.com/macros/s/AKfycbz1lQ6ft649VtDD6KL77Q9kDBmf5SGBnTy7IZyln3O95cas06TNAuVlsWd49wsJEq4IDA/exec"; // *** QUAN TRỌNG: Cần thay thế! ***
-
-          fetch(scriptUrl, {
-            method: "POST",
-            mode: "no-cors", // Sử dụng no-cors để tránh lỗi CORS khi submit form đơn giản
-            headers: {
-              "Content-Type": "application/x-www-form-urlencoded",
-            },
-            body: new URLSearchParams(data).toString(),
-          })
-            .then((response) => {
-              // Do không có CORS, chúng ta không thể kiểm tra response.ok
-              // Thay vào đó, dựa vào hành vi của Google Apps Script (thường thành công nếu không có lỗi)
-              messageDiv.textContent =
-                "Yêu cầu của bạn đã được gửi thành công! Chúng tôi sẽ liên hệ lại sớm.";
-              messageDiv.className = "message success";
-              form.reset(); // Xóa form sau khi gửi thành công
-            })
-            .catch((error) => {
-              console.error("Lỗi khi gửi yêu cầu:", error);
-              messageDiv.textContent =
-                "Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại sau.";
-              messageDiv.className = "message error";
-            });
-        });
-    </script>
-
-    <!-- <script>
-  document
-    .getElementById("tutorRequestForm")
-    .addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const form = e.target;
-      const formData = new FormData(form);
-      const data = {};
-      formData.forEach((value, key) => {
-        data[key] = value;
-      });
-
-      const messageDiv = document.getElementById("formMessage");
-      messageDiv.textContent = "Đang gửi...";
-      messageDiv.className = "message";
-
-      const scriptUrl =
-        "https://script.google.com/macros/s/AKfycbz1lQ6ft649VtDD6KL77Q9kDBmf5SGBnTy7IZyln3O95cas06TNAuVlsWd49wsJEq4IDA/exec";
-
-      fetch(scriptUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-        .then((response) => response.text()) // KHÔNG DÙNG no-cors nữa!
-        .then((text) => {
-          messageDiv.textContent =
-            "Yêu cầu của bạn đã được gửi thành công!";
-          messageDiv.className = "message success";
-          form.reset();
-        })
-        .catch((error) => {
-          console.error("Lỗi khi gửi yêu cầu:", error);
-          messageDiv.textContent =
-            "Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại sau.";
-          messageDiv.className = "message error";
-        });
-    });
-</script> -->
-
   </body>
 </html>
