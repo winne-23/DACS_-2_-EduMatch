@@ -1,4 +1,8 @@
 <?php
+include "config.php";
+?>
+
+<?php
 class Database
 {
     public $host = DB_HOST;
@@ -21,6 +25,7 @@ class Database
         );
         if (!$this->link) {
             $this->error = "Connection fail" . $this->link->connect_error;
+            die($this->error);
             return false;
         }
     }

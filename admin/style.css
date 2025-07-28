@@ -36,10 +36,11 @@ header {
 .admin_content_left ul ul {
   margin-left: 20px;
 }
-.adimin_content_right {
+.admin_content_right {
   width: 80%;
   padding: 30px 0 0 12px;
 }
+/* _---------------------cartegory add------------------- */
 .admin_content_right_category_add input {
   height: 30px;
   width: 200px;
@@ -61,4 +62,17 @@ header {
   background-color: transparent;
   border: 1px solid brown;
   color: brown;
+}
+/* -------------------cartegory_list--------------------- */
+.admin_content_right_cartegory_list table {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.admin_content_right_cartegory_list table tr th,
+td {
+  border: 1px solid #dddddd;
+}
+table {
+  border-collapse: collapse;
 }
