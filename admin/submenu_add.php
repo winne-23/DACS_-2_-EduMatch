@@ -17,6 +17,7 @@ if($_SERVER ['REQUEST_METHOD']=== 'POST'){
     <div class="admin_content_right_category_add">
         <form action="" method="POST">
             <select name="cartegory_id" id="">
+                <option value="">--Chọn Submenu--</option>
                 <?php
                     $show_cartegory = $submenu ->show_cartegory();
                     if($show_cartegory){

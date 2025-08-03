@@ -14,10 +14,10 @@
                      <li><a href="submenu_list.php">Danh sách Sub_menu</a></li>
                  </ul>
              </li>
-             <li><a href="">Content</a>
+             <li><a href="">Lớp học</a>
                  <ul>
-                     <li><a href="">Thêm Content</a></li>
-                     <li><a href="">Danh sách Content</a></li>
+                     <li><a href="class_add.php">Thêm Lớp học </a></li>
+                     <li><a href="class_list.php">Danh sách Lớp học</a></li>
                  </ul>
              </li>
          </ul>

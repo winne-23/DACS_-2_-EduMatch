@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/Image/Logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <title>EduMatch</title>
+</head>
+
+<body>
+    <!-- -----------------làm thanh menu bên trên ------------------->
+    <header class="custom_header">
+        <div class="logo">
+            <a href="index.php"><img src="..\Image\Logo.png" alt="Xin lỗi nha quý dị" srcset="" /></a>
+        </div>
+        <div class="menu">
+            <li class="Giới thiệu">
+                <a href="Gioi_thieu.php" title="Menu giới thiệu">Giới thiệu</a>
+            </li>
+            <li title="Menu phụ huynh">
+                <a href="Menu_phu_huynh.php">Phụ huynh</a>
+                <ul class="sub_menu">
+                    <li>
+                        <a href="Form_phu_huynh.php">Đăng kí tìm gia sư</a>
+                    </li>
+                    <li>
+                        <a href="Menu_phu_huynh.php">Học phí tham khảo</a>
+                    </li>
+                    <li>
+                        <a href="Menu_phu_huynh.php">Dịch vụ gia sư</a>
+                    </li>
+                    <li>
+                        <a href="Menu_phu_huynh.php">Gia sư tiêu biểu</a>
+                    </li>
+                </ul>
+            </li>
+            <li title="Menu gia sư">
+                <a href="Menu_gia_su.php">Gia sư</a>
+                <ul class="sub_menu">
+                    <li>
+                        <a href="Form_gia_su.php">Đăng kí làm gia sư</a>
+                    </li>
+                    <li>
+                        <a href="Menu_gia_su.php">Hướng dẫn nhận lớp</a>
+                    </li>
+                    <li>
+                        <a href="Menu_gia_su.php">Hợp đồng gia sư</a>
+                    </li>
+                    <li>
+                        <a href="Menu_gia_su.php">Tuyển dụng</a>
+                    </li>
+                </ul>
+            </li>
+            <li title="Menu lớp chưa giao">
+                <a href="Menu_lop_chua_giao.php">Lớp chưa giao</a>
+                <ul class="sub_menu">
+                    <li>
+                        <a href="Menu_lop_chua_giao.php">Cấp 1</a>
+                    </li>
+                    <li>
+                        <a href="Menu_lop_chua_giao.php">Cấp 2</a>
+                    </li>
+                    <li>
+                        <a href="Menu_lop_chua_giao.php">Cấp 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li title="Menu tuyển dụng">
+                <a href="Menu_tuyen_dung.php">Tuyển dụng</a>
+            </li>
+            <li title="Menu hỏi đáp">
+                <a href="Menu_hoi_dap.php">Hỏi đáp</a>
+                <ul class="sub_menu">
+                    <li>
+                        <a href="Menu_hoi_dap.php">Phụ huynh</a>
+                    </li>
+                    <li>
+                        <a href="Menu_hoi_dap.php">Gia sư</a>
+                    </li>
+                </ul>
+            </li>
+            <li title="Menu liên hệ">
+                <a href="Menu_lien_he.php">Liên hệ</a>
+            </li>
+        </div>
+    </header>
+    <div class="Introduce_contents">
+        <section class="hero is-link is-bold">
+            <div class="hero-body has-text-centered">
+                <p class="title">Câu Hỏi Thường Gặp</p>
+                <p class="subtitle">Phụ huynh & Gia sư thường quan tâm điều gì?</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <!-- Tabs -->
+                <div class="tabs is-toggle is-fullwidth is-large">
+                    <ul id="tabHeaders">
+                        <li class="is-active" data-tab="phu-huynh">
+                            <a><span class="icon"><i class="fas fa-user-shield"></i></span>Phụ huynh</a>
+                        </li>
+                        <li data-tab="gia-su">
+                            <a><span class="icon"><i class="fas fa-user-graduate"></i></span>Gia sư</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Nội dung hỏi đáp -->
+                <div id="tabContents">
+                    <!-- PHỤ HUYNH -->
+                    <div class="faq-content is-active" id="phu-huynh">
+                        <article class="message is-info">
+                            <div class="message-header">
+                                <p>Tôi có phải trả thêm phí ngoài học phí không?</p>
+                            </div>
+                            <div class="message-body">
+                                Không. Trung tâm chỉ thu phí từ phía gia sư, phụ huynh chỉ cần
+                                trả học phí đúng như đã thỏa thuận.
+                            </div>
+                        </article>
+
+                        <article class="message is-info">
+                            <div class="message-header">
+                                <p>Làm sao để biết gia sư có phù hợp?</p>
+                            </div>
+                            <div class="message-body">
+                                Trung tâm sẽ lựa chọn gia sư phù hợp dựa trên yêu cầu và giới
+                                thiệu hồ sơ chi tiết để phụ huynh duyệt.
+                            </div>
+                        </article>
+
+                        <article class="message is-info">
+                            <div class="message-header">
+                                <p>Nếu tôi không hài lòng với gia sư thì sao?</p>
+                            </div>
+                            <div class="message-body">
+                                Phụ huynh có thể yêu cầu đổi gia sư bất cứ lúc nào nếu cảm
+                                thấy không phù hợp.
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- GIA SƯ -->
+                    <div class="faq-content" id="gia-su">
+                        <article class="message is-success">
+                            <div class="message-header">
+                                <p>Tôi cần điều kiện gì để làm gia sư tại đây?</p>
+                            </div>
+                            <div class="message-body">
+                                Bạn cần là sinh viên hoặc đã tốt nghiệp đại học, có trách
+                                nhiệm, kỹ năng sư phạm và cam kết dạy lâu dài.
+                            </div>
+                        </article>
+
+                        <article class="message is-success">
+                            <div class="message-header">
+                                <p>Tôi có thể dạy nhiều lớp cùng lúc không?</p>
+                            </div>
+                            <div class="message-body">
+                                Có. Nếu bạn đủ thời gian và chất lượng dạy tốt, bạn có thể
+                                nhận nhiều lớp cùng lúc.
+                            </div>
+                        </article>
+
+                        <article class="message is-success">
+                            <div class="message-header">
+                                <p>Tôi có được hỗ trợ khi gặp khó khăn không?</p>
+                            </div>
+                            <div class="message-body">
+                                Trung tâm luôn hỗ trợ gia sư về tài liệu, trao đổi phương pháp
+                                dạy và xử lý tình huống với học viên/phụ huynh.
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!---------------------- làm footer------------------------- -->
+    <div class="footer_top">
+        <li title="Footer Liên hệ">
+            <a class="footer_title">Liên hệ</a>
+            <ul class="sub_footer">
+                <img src="..\Image\Logo.png" style="width: 35%; height: auto" alt="Xin lỗi nha quý dị" srcset="" />
+
+                <li>
+                    <p>Công ty trách nhiệm hữu hạn một thành viên EduMath</p>
+                </li>
+                <li>
+                    <p>
+                        Địa chỉ: 470 Đ. Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng ,
+                        Vietnam
+                    </p>
+                </li>
+                <li>
+                    <p>ĐT: 0935.707.794</p>
+                </li>
+                <li>
+                    <p>Email: thangtm.23it@vku.udn.vn</p>
+                </li>
+            </ul>
+        </li>
+        <li title="Footer hỏi đáp">
+            <a class="footer_title">Các câu hỏi thường gặp</a>
+            <ul class="sub_footer">
+                <li>
+                    <p>Tại sao tôi lại tìm gia sư trên EduMath?</p>
+                </li>
+                <li>
+                    <p>Có phải đóng gì thêm ngoài tiền học phí không?</p>
+                </li>
+                <li>
+                    <p>Nhà tôi không có chỗ để học?</p>
+                </li>
+                <li>
+                    <p>Muốn nhận lớp dạy tôi phải làm những gì?</p>
+                </li>
+                <li>
+                    <p>Hiện giờ tôi không đủ chi phí để nhận lớp?</p>
+                </li>
+                <li>
+                    <p>Có phải làm hợp đồng không?</p>
+                </li>
+                <li>
+                    <p>Khi dạy gia sư có cam kết gì không?</p>
+                </li>
+                <li>
+                    <p>Nếu tôi thấy không hài lòng về gia sư thì sao?</p>
+                </li>
+            </ul>
+        </li>
+        <li title="Footer Trên mạng xã hội">
+            <a class="footer_title">Các trang mạng truyền thông</a>
+            <ul>
+                <li class="footer_icon">
+                    <a href="https://www.facebook.com/tran.thang.453967/" class="fa-brands fa-facebook"></a>
+                    <a href="https://www.instagram.com/okewinn.ne/" class="fa-brands fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@tranmanhthang07082005" class="fa-brands fa-tiktok"></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox" class="fa-solid fa-envelope"></a>
+                    <a href="https://www.threads.com/@okewinn.ne" class="fa-brands fa-threads"></a>
+                </li>
+            </ul>
+        </li>
+    </div>
+    <script>
+    const tabs = document.querySelectorAll("#tabHeaders li");
+    const contents = document.querySelectorAll(".faq-content");
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+            // Xoá class active tab cũ
+            tabs.forEach((t) => t.classList.remove("is-active"));
+            contents.forEach((c) => c.classList.remove("is-active"));
+
+            // Gán lại tab mới
+            tab.classList.add("is-active");
+            const id = tab.getAttribute("data-tab");
+            document.getElementById(id).classList.add("is-active");
+        });
+    });
+    </script>
+</body>
+
+</html>

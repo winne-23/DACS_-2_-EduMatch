@@ -25,7 +25,7 @@
 }
 ?>
 <div class="admin_content_right">
-    <h1>Thêm Menu</h1>
+    <h1>Sửa Menu</h1>
     <div class="admin_content_right_category_add">
         <form action="" method="POST">
             <input required name="cartegory_name" type="text" placeholder="Nhập tên Menu"

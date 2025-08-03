@@ -15,82 +15,82 @@
     <!-- -----------------làm thanh menu bên trên ------------------->
     <header>
       <div class="logo">
-        <a href="index.html"
+        <a href="index.php"
           ><img src="..\Image\Logo.png" alt="Xin lỗi nha quý dị" srcset=""
         /></a>
       </div>
       <div class="menu">
         <li class="Giới thiệu">
-          <a href="Gioi_thieu.html" title="Menu giới thiệu">Giới thiệu</a>
+          <a href="Gioi_thieu.php" title="Menu giới thiệu">Giới thiệu</a>
         </li>
         <li title="Menu phụ huynh">
-          <a href="Menu_phu_huynh.html">Phụ huynh</a>
+          <a href="Menu_phu_huynh.php">Phụ huynh</a>
           <ul class="sub_menu">
             <li>
-              <a href="..\Form_dang_ki_gia_su\Form_phu_huynh.html"
+              <a href="Form_phu_huynh.php"
                 >Đăng kí tìm gia sư</a
               >
             </li>
             <li>
-              <a href="Menu_phu_huynh.html">Học phí tham khảo</a>
+              <a href="Menu_phu_huynh.php">Học phí tham khảo</a>
             </li>
             <li>
-              <a href="Menu_phu_huynh.html">Dịch vụ gia sư</a>
+              <a href="Menu_phu_huynh.php">Dịch vụ gia sư</a>
             </li>
             <li>
-              <a href="Menu_phu_huynh.html">Gia sư tiêu biểu</a>
+              <a href="Menu_phu_huynh.php">Gia sư tiêu biểu</a>
             </li>
           </ul>
         </li>
         <li title="Menu gia sư">
-          <a href="Menu_gia_su.html">Gia sư</a>
+          <a href="Menu_gia_su.php">Gia sư</a>
           <ul class="sub_menu">
             <li>
-              <a href="..\Form_dang_ki_gia_su\Form_gia_su.html"
+              <a href="Form_gia_su.php"
                 >Đăng kí làm gia sư</a
               >
             </li>
             <li>
-              <a href="Menu_gia_su.html">Hướng dẫn nhận lớp</a>
+              <a href="Menu_gia_su.php">Hướng dẫn nhận lớp</a>
             </li>
             <li>
-              <a href="Menu_gia_su.html">Hợp đồng gia sư</a>
+              <a href="Menu_gia_su.php">Hợp đồng gia sư</a>
             </li>
             <li>
-              <a href="Menu_gia_su.html">Tuyển dụng</a>
+              <a href="Menu_gia_su.php">Tuyển dụng</a>
             </li>
           </ul>
         </li>
         <li title="Menu lớp chưa giao">
-          <a href="Menu_lop_chua_giao.html">Lớp chưa giao</a>
+          <a href="Menu_lop_chua_giao.php">Lớp chưa giao</a>
           <ul class="sub_menu">
             <li>
-              <a href="Menu_lop_chua_giao.html">Cấp 1</a>
+              <a href="Menu_lop_chua_giao.php">Cấp 1</a>
             </li>
             <li>
-              <a href="Menu_lop_chua_giao.html">Cấp 2</a>
+              <a href="Menu_lop_chua_giao.php">Cấp 2</a>
             </li>
             <li>
-              <a href="Menu_lop_chua_giao.html">Cấp 3</a>
+              <a href="Menu_lop_chua_giao.php">Cấp 3</a>
             </li>
           </ul>
         </li>
         <li title="Menu tuyển dụng">
-          <a href="Menu_tuyen_dung.html">Tuyển dụng</a>
+          <a href="Menu_tuyen_dung.php">Tuyển dụng</a>
         </li>
         <li title="Menu hỏi đáp">
-          <a href="Menu_hoi_dap.html">Hỏi đáp</a>
+          <a href="Menu_hoi_dap.php">Hỏi đáp</a>
           <ul class="sub_menu">
             <li>
-              <a href="Menu_hoi_dap.html">Phụ huynh</a>
+              <a href="Menu_hoi_dap.php">Phụ huynh</a>
             </li>
             <li>
-              <a href="Menu_hoi_dap.html">Gia sư</a>
+              <a href="Menu_hoi_dap.php">Gia sư</a>
             </li>
           </ul>
         </li>
         <li title="Menu liên hệ">
-          <a href="Menu_lien_he.html">Liên hệ</a>
+          <a href="Menu_lien_he.php">Liên hệ</a>
         </li>
       </div>
     </header>

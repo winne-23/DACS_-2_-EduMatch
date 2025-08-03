@@ -5,31 +5,46 @@
 ?>
 
 <?php
-    $cartegory = new cartegory;
-    if(!isset($_GET['cartegory_id']) || $_GET['cartegory_id']==NULL){
-        echo "<scrip> window.location = 'cartegory_list.php";
+    $submenu = new submenu;
+    $submenu_id = $_GET['submenu_id'];
+    $get_submenu = $submenu->get_submenu($submenu_id);
+    if($get_submenu){
+        $result_submenu = $get_submenu->fetch_assoc();
     }
-    else{
-        $cartegory_id = $_GET['cartegory_id'];
-    }
-    $_get_cartegory = $cartegory ->get_cartegory($cartegory_id);
-    if($_get_cartegory){
-        $result = $_get_cartegory ->fetch_assoc();
-    }
+    
 ?>
 <!-- ------------Hàm update--------- -->
 <?php
-    if($_SERVER ['REQUEST_METHOD']=== 'POST'){
-        $cartegory_name = $_POST['cartegory_name'];
-    $update_cartegory = $cartegory ->update_cartegory($cartegory_name,$cartegory_id);
+$submenu = new submenu;
+if($_SERVER ['REQUEST_METHOD']=== 'POST'){
+    $cartegory_id = $_POST['cartegory_id'];
+    $submenu_name = $_POST['submenu_name'];
+    $update_submenu = $submenu ->update_submenu($cartegory_id,$submenu_name,$submenu_id);
 }
 ?>
+
 <div class="admin_content_right">
-    <h1>Thêm Menu</h1>
+    <h1>Thêm Sub-Menu</h1>
     <div class="admin_content_right_category_add">
         <form action="" method="POST">
-            <input required name="cartegory_name" type="text" placeholder="Nhập tên Menu"
-                value="<?php echo $result['cartegory_name'] ?>">
+            <select name="cartegory_id" id="">
+                <option value="">--Chọn Submenu--</option>
+                <?php
+                    $show_cartegory = $submenu ->show_cartegory();
+                    if($show_cartegory){
+                        while($result = $show_cartegory ->fetch_assoc()) {
+                ?>
+                <option <?php if($result_submenu['cartegory_id'] == $result['cartegory_id']) {echo "SELECTED";} ?>
+                    value="<?php echo $result ['cartegory_id']  ?>">
+                    <?php echo $result ['cartegory_name']?>
+                </option>
+
+                <?php
+                    }}
+                ?>
+            </select> <br>
+            <input required name="submenu_name" type="text" placeholder="Nhập tên Sub-Menu"
+                value="<?php echo ($result_submenu['submenu_name'])  ?>">
             <button type="submit">Sửa</button>
         </form>
     </div>
