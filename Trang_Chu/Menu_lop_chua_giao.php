@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-include "phu_huynh_class.php";
+include "class/phu_huynh_class.php";
 ?>
 <?php
 $lop_chua_giao = new phu_huynh_class;
@@ -151,8 +151,10 @@ $result = $lop_chua_giao ->show_lop_chua_giao();
                                 </div>
                             </div>
                             <footer class="card-footer">
-                                <a href="Dang_ki_nhan_lop.php" class="card-footer-item has-text-primary">Đăng ký nhận
-                                    lớp</a>
+                                <a href="#" class="card-footer-item has-text-primary btn-dang-ky"
+                                    data-class-id="<?php echo $row['phu_huynh_id']; ?>">
+                                    Đăng ký nhận lớp
+                                </a>
                             </footer>
                         </div>
                     </div>
@@ -256,6 +258,60 @@ $result = $lop_chua_giao ->show_lop_chua_giao();
                 }
             });
         });
+    </script>
+    <!-- -------------thông báo của nút đăng kí-------------- -->
+    <div id="modal-dang-ky" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Nhập số điện thoại</p>
+                <button class="delete" aria-label="close" id="close-modal"></button>
+            </header>
+            <section class="modal-card-body">
+                <input type="text" id="so-dien-thoai" class="input" placeholder="Nhập số điện thoại">
+                <input type="hidden" id="class-id-modal">
+                <p id="modal-error" style="color:red;display:none;"></p>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success" id="accept-modal">Accept</button>
+                <button class="button" id="cancel-modal">Cancel</button>
+            </footer>
+        </div>
+    </div>
+    <script>
+    document.querySelectorAll('.btn-dang-ky').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('modal-dang-ky').classList.add('is-active');
+            document.getElementById('class-id-modal').value = this.getAttribute('data-class-id');
+            document.getElementById('so-dien-thoai').value = '';
+            document.getElementById('modal-error').style.display = 'none';
+        });
+    });
+    document.getElementById('close-modal').onclick = function() {
+        document.getElementById('modal-dang-ky').classList.remove('is-active');
+    };
+    document.getElementById('cancel-modal').onclick = function() {
+        document.getElementById('modal-dang-ky').classList.remove('is-active');
+    };
+    document.getElementById('accept-modal').onclick = function() {
+        var sdt = document.getElementById('so-dien-thoai').value.trim();
+        var classId = document.getElementById('class-id-modal').value;
+        if (!sdt.match(/^0\d{9,10}$/)) {
+            document.getElementById('modal-error').innerText = "Vui lòng nhập số điện thoại hợp lệ!";
+            document.getElementById('modal-error').style.display = 'block';
+            return;
+        }
+        // Gửi AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'dang_ki_nhan_lop.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            alert(xhr.responseText);
+            document.getElementById('modal-dang-ky').classList.remove('is-active');
+        };
+        xhr.send('class_id=' + encodeURIComponent(classId) + '&so_dien_thoai=' + encodeURIComponent(sdt));
+    };
     </script>
 </body>
 

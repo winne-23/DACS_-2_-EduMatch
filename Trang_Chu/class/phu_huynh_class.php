@@ -1,5 +1,5 @@
 <?php
-include(__DIR__ . "/../admin/database.php");
+include(__DIR__ . "/../../admin/database.php");
 
 ?>
 <?php
@@ -17,12 +17,43 @@ class phu_huynh_class {
         // header('location:class_list.php');
         return $result;
     }
-
+    // Lấy thông tin gia sư theo id
+    public function get_lop_chua_giao($phu_huynh_id) {
+        $query = "SELECT * FROM phu_huynh WHERE phu_huynh_id = $phu_huynh_id";
+        return $this->db->select($query);
+    }
 
 // show list Lop chưa giao
     public function show_lop_chua_giao(){
         $query = "SELECT * FROM phu_huynh ORDER BY phu_huynh_id DESC";
         $result = $this ->db->select($query);
+        return $result;
+    }
+
+    // Định nghĩa hàm delete_lop_chua_giao
+    public function delete_lop_chua_giao($phu_huynh_id){
+        $query = "DELETE FROM phu_huynh  WHERE Phu_huynh_id = '$phu_huynh_id'";
+        $result = $this ->db->delete($query);
+        header('location:lop_chua_giao_list.php');
+        return $result;
+    }
+
+    // show list show_dk_nhan_lop
+    public function show_dk_nhan_lop(){
+        $query = "SELECT * FROM dk_nhan_lop ORDER BY dk_nhan_lop_id DESC";
+        $result = $this ->db->select($query);
+        return $result;
+    }
+        // Lấy thông tin get_lop_chua_giao
+    public function get_dk_nhan_lop($dk_nhan_lop_id){
+        $query = "SELECT * FROM dk_nhan_lop WHERE dk_nhan_lop_id = $dk_nhan_lop_id";
+        return $this->db->select($query);
+    }
+        // Định nghĩa hàm delete_lop_chua_giao
+    public function delete_dk_nhan_lop($dk_nhan_lop_id){
+        $query = "DELETE FROM dk_nhan_lop  WHERE dk_nhan_lop_id = '$dk_nhan_lop_id'";
+        $result = $this ->db->delete($query);
+        header('location:dk_nhan_lop_list.php');
         return $result;
     }
     // // show list Menu
